@@ -52,6 +52,21 @@ return {
 						"{C:inactive,s:0.6}Currently using dev graphics...{}"
 					}
 				}
+			j_finalboss_nyxavatar = {
+					name = 'Nyx Avatar',
+					text = {
+						"{C:red}Work in Progress{}",
+						"{C:attention}May not work as intended.{}",
+						" ",
+						"Generates a {C:tarot}Tarot{} card",
+						"whenever you {C:attention}discard{}",
+						" ",
+						"{C:inactive}''The Arcana is the means by which all is revealed...''{}",
+						"{C:inactive,s:0.8}Source: Persona 3{}",
+						"{C:inactive,s:0.6}Currently using dev graphics...{}"
+					}
+				}
+			}
 			},
         Other={
 			DigitalRoot = {

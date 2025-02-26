@@ -148,8 +148,7 @@ SMODS.Joker{
 			and not context.other_card.debuff --This shit ain't nothin' to me, man!
 			and SMODS.has_enhancement(context.other_card, 'm_glass')
 			and not context.blueprint			
-		then --I can't wait to curbstomp you in these dumb-ass Rick Owen shoes
-			--play_sound('glass1') --Might not be needed?
+		then --I can't wait to curbstomp you in these dumb ugly ass Rick Owen shoes
 			card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_mod
 			return {
 				message = localize('k_upgrade_ex'),
@@ -353,26 +352,16 @@ SMODS.Joker{
 --Nyx Avatar from Persona 3.
 --Design by Arti
 SMODS.Joker{
-	key = 'nyx_avatar',
-	loc_txt = {
-		name = 'Nyx Avatar',
-		text = {
-			"{X:negative,C:red}Unimplemented{}",
-			"{C:attention}Effects are not final.{}",
-			" ",
-			"Generates a {C:tarot}Tarot{} card",
-			"whenever you {C:attention}discard{}",
-			" ",
-			"{C:inactive}''The Arcana is the means by which all is revealed...''{}",
-			"{C:inactive,s:0.8}Source: Persona 3{}",
-			"{C:inactive,s:0.6}Currently using dev graphics...{}"
-		}
-	},
+	key = 'nyxavatar',
 	rarity = 'finalboss_unimplemented',
 	atlas = 'FinalBosses',
 	pos = { x = 8, y = 0 },
 	soul_pos = { x = 8, y = 1 },
-	cost = 25
+	cost = 25,
+	calculate = function(self, card, context)
+		if context.discard then 
+		end	
+	end
 }
 
 --Lavos from Chrono Trigger.
