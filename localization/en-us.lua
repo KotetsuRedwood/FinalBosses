@@ -51,7 +51,7 @@ return {
 						"{C:inactive,s:0.8}Source: Touhou 16: Hidden Star In Four Seasons{}",
 						"{C:inactive,s:0.6}Currently using dev graphics...{}"
 					}
-				}
+				},
 			j_finalboss_nyxavatar = {
 					name = 'Nyx Avatar',
 					text = {
@@ -66,13 +66,12 @@ return {
 						"{C:inactive,s:0.6}Currently using dev graphics...{}"
 					}
 				}
-			}
 			},
         Other={
 			DigitalRoot = {
 				name = "What's a Digital Root?",
 				text = {
-						"To calculate the {C:attention}digital root of a",
+						"To calculate the {C:attention}digital root {}of a",
 						"set of numbers, add them all together,",
 						"and then {C:attention}repeat{} until you have only",
 						"{C:attention}one{} digit.",
