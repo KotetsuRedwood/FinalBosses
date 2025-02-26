@@ -55,9 +55,6 @@ return {
 			j_finalboss_nyxavatar = {
 					name = 'Nyx Avatar',
 					text = {
-						"{C:red}Work in Progress{}",
-						"{C:attention}May not work as intended.{}",
-						" ",
 						"Generates a {C:tarot}Tarot{} card",
 						"whenever you {C:attention}discard{}",
 						" ",

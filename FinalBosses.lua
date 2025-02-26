@@ -214,7 +214,7 @@ SMODS.Joker{
 				return true
 				end
 			}))
-			return {
+			return{
 					message = localize("k_again_ex"),
 					repetitions = 4,
 					card = card,
@@ -227,13 +227,29 @@ SMODS.Joker{
 --Design by Arti
 SMODS.Joker{
 	key = 'nyxavatar',
-	rarity = 'finalboss_unimplemented',
+	rarity = 4,
 	atlas = 'FinalBosses',
 	pos = { x = 8, y = 0 },
 	soul_pos = { x = 8, y = 1 },
 	cost = 25,
 	calculate = function(self, card, context)
-		if context.discard then 
+		if
+			context.discard and
+			#G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit
+		then
+			G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+			G.E_MANAGER:add_event(Event({
+				func = function()
+					local card = create_card('Tarot',G.consumeables, nil, nil, nil, nil, nil, 'nyxavatar')
+					card:add_to_deck()
+					G.consumeables:emplace(card)
+					G.GAME.consumeable_buffer = 0
+					return true
+				end
+			}))
+			return{
+				message = localize('k_plus_tarot'), colour = G.C.PURPLE
+			}
 		end	
 	end
 }
@@ -245,7 +261,7 @@ SMODS.Joker{
 --  # #  ##### #     ####
 
 -- Half-finished ideas beyond this zone!! watch out.
-
+--[[
 --Ultimecia, from FF8. Compresses all hands into 1. Gives a bonus based on max hands?
 --Design by Kotetsu + Arti.
 SMODS.Joker{
@@ -489,7 +505,7 @@ SMODS.Joker{
 	soul_pos = { x = 0, y = 1 },
 	cost = 25
 }
-]]--
+--]]
 
 --Dr. Kaizo Inazuma, shameless self insert. I have no idea what he'll do. Just a teaser for now!
 --TODO: Work out what Inazuma does. Probably Exotic power level? 
