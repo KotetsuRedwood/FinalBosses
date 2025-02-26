@@ -1,0 +1,15 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.regex]
+target = "card.lua"
+pattern = 'self\.children\.back = Sprite.*'
+position = 'after'
+payload = '''
+if _center.backsprite then
+    self.children.back = Sprite(self.T.x, self.T.y, self.T.w, self.T.h, G.ASSET_ATLAS['finalboss_FinalBosses'], self.config.center.backsprite)
+end
+'''
+match_indent = true

@@ -1,0 +1,17 @@
+{
+	"id": "FinalBosses",
+	"name": "Final Bosses",
+	"display_name": "Final Bosses",
+	"author": ["Kotetsu", "Arti"],
+	"description": "A legendary jokers pack based around final bosses, and similar 'big bads', with an attempt at making thematic abilities.",
+	"prefix": "finalboss",
+	"main_file": "FinalBosses.lua",
+	"priority": 0,
+	"badge_colour": "426767",
+	"badge_text_colour": "3EFFCC",
+	"version": "0.0.0~ALPHA161",
+	"dependencies": [
+		"Lovely (>=0.6)",
+		"Steamodded (>=1.0.0~1304a*)"
+	],
+}

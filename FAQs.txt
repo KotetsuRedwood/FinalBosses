@@ -1,0 +1,13 @@
+Final Bosses mod FAQ:
+
+--==What is a Digital Root?==--
+~~play 9 Hours, 9 Persons, 9 Doors~~
+
+To find the digital root of a set of numbers,
+add all of the numbers together. Then, if the
+result has more than 1 digit, continue until
+you get a single digit.
+
+--==WHY a Digital Root?==--
+
+Seriously, play 9 Hours, 9 Persons, 9 Doors.
