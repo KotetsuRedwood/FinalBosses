@@ -223,6 +223,21 @@ SMODS.Joker{
 	end,
 }
 
+--Nyx Avatar from Persona 3.
+--Design by Arti
+SMODS.Joker{
+	key = 'nyxavatar',
+	rarity = 'finalboss_unimplemented',
+	atlas = 'FinalBosses',
+	pos = { x = 8, y = 0 },
+	soul_pos = { x = 8, y = 1 },
+	cost = 25,
+	calculate = function(self, card, context)
+		if context.discard then 
+		end	
+	end
+}
+
 -- #   # ##### ####   ####
 -- # # #   #   #   # #
 -- # # #   #   ####   ###
@@ -349,20 +364,7 @@ SMODS.Joker{
 	cost = 25
 }
 
---Nyx Avatar from Persona 3.
---Design by Arti
-SMODS.Joker{
-	key = 'nyxavatar',
-	rarity = 'finalboss_unimplemented',
-	atlas = 'FinalBosses',
-	pos = { x = 8, y = 0 },
-	soul_pos = { x = 8, y = 1 },
-	cost = 25,
-	calculate = function(self, card, context)
-		if context.discard then 
-		end	
-	end
-}
+
 
 --Lavos from Chrono Trigger.
 --Design by Arti
