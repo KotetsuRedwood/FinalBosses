@@ -60,16 +60,6 @@ SMODS.Rarity{
     end
 }
 
---Custom Rarity for UNIMPLEMENTED jokers. This is so the mod won't spawn jank jokers while in dev!!
-SMODS.Rarity{
-	key = "unimplemented",
-	loc_txt = {
-		name = 'Unimplemented'
-	},
-	badge_colour = HEX('222222'),
-	pools = {},
-}
-
 --Zero from Zero Escape. Oh god why did I pick them as my first one.
 --Might be a bit too powerful for legendary since it's possible to get consistent X9, but it requires either building around 9s, or calculating digital roots on the fly. I think it's fine, but limiting it to 3+ card hands would make it more flavourful as well as making it more of a "build around", like Triboulet.
 --Design by Kotetsu
@@ -109,7 +99,7 @@ SMODS.Joker{
 		if context.joker_main and not context.blueprint and not context.repetition then
 			card.ability.extra.Xmult = math.fmod(card.ability.extra.totalHand, 9)
 			if card.ability.extra.totalHand == 0 then
-				card.ability.extra.Xmult = 1
+				card.ability.extra.Xmult = 1 
 			elseif card.ability.extra.Xmult == 0 then
 				card.ability.extra.Xmult = 9
 			end
